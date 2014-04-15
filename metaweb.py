@@ -1,7 +1,7 @@
 #========================================================================
 # Copyright (c) 2007, Metaweb Technologies, Inc.
 # All rights reserved.
-# 
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
 # are met:
@@ -11,7 +11,7 @@
 #       copyright notice, this list of conditions and the following
 #       disclaimer in the documentation and/or other materials provided
 #       with the distribution.
-# 
+#
 # THIS SOFTWARE IS PROVIDED BY METAWEB TECHNOLOGIES ``AS IS'' AND ANY
 # EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 # IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
@@ -54,7 +54,7 @@ loginservice = '/api/account/login'     # Path to login service
 writeservice = '/api/service/mqlwrite'  # Path to mqlwrite service
 uploadservice = '/api/service/upload'   # Path to upload service
 searchservice = '/api/service/search'   # Path to search service
-                 
+
 credentials = None      # default credential from login()
 escape = False          # default escape, set to 'html' for HTML escaping
 permission = None       # default permission used when creating new objects
@@ -142,7 +142,7 @@ def readall(q, credentials=credentials, escape=escape):
     # Add escape if needed
     if escape != 'html':
         jsonq += ',"escape":' + ('false' if not escape else escape)
- 
+
     cursor = 'true'   # This is the initial value of the cursor
     results = []      # We accumulate results in this array
 
@@ -159,7 +159,7 @@ def readall(q, credentials=credentials, escape=escape):
 
         # Send our authentication credentials, if any, as a cookie.
         # The need for mqlread authentication is a temporary restriction.
-        if credentials: 
+        if credentials:
             req.add_header('Cookie', credentials)
 
         # Use the encoded envelope as the value of the q parameter in the body
@@ -253,12 +253,12 @@ def readmulti(queries, credentials=credentials, escape=escape):
             error = result['messages'][0]
             raise MQLError('%s: %s' % (error['code'], error['message']))
         results.append(result['result'])
-    
+
     # If there was no error, then just return the result from the envelope
     return results
 
 # Submit the specified username and password to the Metaweb login service.
-# Return opaque authentication credentials on success. 
+# Return opaque authentication credentials on success.
 # Raise MQLError on failure.
 def login(username, password):
     # Establish a connection to the server and make a request.
@@ -409,7 +409,7 @@ class cursor:
         self.jsonq = simplejson.dumps(self.query)
         if escape != 'html':
             self.jsonq += ',"escape":' + ('false' if not escape else escape)
- 
+
     def __iter__(self):
         return self
 
@@ -423,7 +423,7 @@ class cursor:
         # check if there is more
         if not self.cursor:
             raise StopIteration
-        
+
         # append the cursor and the closing braces to the envelope
         envelope = urllib.urlencode({'query': '{"query":' + self.jsonq + ',"cursor":' + self.cursor + '}'})
 
