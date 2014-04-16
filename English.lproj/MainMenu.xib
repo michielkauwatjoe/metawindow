@@ -331,7 +331,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="375">
-                        <rect key="frame" x="20" y="17" width="440" height="290"/>
+                        <rect key="frame" x="20" y="13" width="440" height="290"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="Uts-ck-ed8">
                             <rect key="frame" x="1" y="17" width="438" height="272"/>
@@ -390,7 +390,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="376">
-                            <rect key="frame" x="423" y="17" width="16" height="272"/>
+                            <rect key="frame" x="424" y="17" width="15" height="272"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="379">
@@ -410,7 +410,7 @@
                     <button verticalHuggingPriority="750" id="386">
                         <rect key="frame" x="341" y="314" width="120" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="squareTextured" title="Search" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="387">
+                        <buttonCell key="cell" type="squareTextured" title="Burp" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="387">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>

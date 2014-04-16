@@ -11,6 +11,7 @@ from Foundation import *
 from AppKit import *
 
 class MetaWindowAppDelegate(NSObject):
+
     def applicationDidFinishLaunching_(self, sender):
         try:
             path = self.pathForFile('cache.serialized')
@@ -19,7 +20,7 @@ class MetaWindowAppDelegate(NSObject):
             file.close()
         except IOError:
             self.cache = {}
-    
+
     def applicationWillTerminate_(self,sender):
         yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
         for key in self.cache:
@@ -33,7 +34,7 @@ class MetaWindowAppDelegate(NSObject):
         file = open(path,'w')
         pickle.dump(self.cache,file)
         file.close()
-                
+
     def applicationSupportFolder(self):
         paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory,NSUserDomainMask,True)
         basePath = (len(paths) > 0 and paths[0]) or NSTemporaryDirectory()
@@ -41,6 +42,6 @@ class MetaWindowAppDelegate(NSObject):
         if not os.path.exists(fullPath):
             os.mkdir(fullPath)
         return fullPath
-        
+
     def pathForFile(self,filename):
         return self.applicationSupportFolder().stringByAppendingPathComponent_(filename)
