@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77631A270C06C501005415CB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77631A260C06C501005415CB /* Python.framework */; };
 		77631A3F0C0748CF005415CB /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 77631A3E0C0748CF005415CB /* main.py */; };
 		7790198F0C07548A00326F66 /* MetaWindowAppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 7790198E0C07548A00326F66 /* MetaWindowAppDelegate.py */; };
 		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
@@ -20,7 +19,35 @@
 		BEE74CB40E647FDB0081791E /* MWRowWindowController.py in Resources */ = {isa = PBXBuildFile; fileRef = BEE74CB30E647FDB0081791E /* MWRowWindowController.py */; };
 		BEE74CCE0E64865C0081791E /* RowWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE74CCD0E64865C0081791E /* RowWindow.xib */; };
 		BEE9BD050E5F404A00CBCEC3 /* MWController.py in Resources */ = {isa = PBXBuildFile; fileRef = BEE9BD040E5F404A00CBCEC3 /* MWController.py */; };
+		CC1DBBB618FEC87C0075CB6B /* libpython2.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1DBBB518FEC87C0075CB6B /* libpython2.7.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		CC1DBBB218FEC4060075CB6B /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+		CC1DBBB318FEC4070075CB6B /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+		CC1DBBB418FEC4090075CB6B /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -30,7 +57,6 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* MetaWindow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetaWindow_Prefix.pch; sourceTree = "<group>"; };
-		77631A260C06C501005415CB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /System/Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
 		77631A3E0C0748CF005415CB /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
 		7790198E0C07548A00326F66 /* MetaWindowAppDelegate.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MetaWindowAppDelegate.py; sourceTree = "<group>"; };
 		77C8C1F80C07829500965286 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -42,6 +68,7 @@
 		BEE74CB30E647FDB0081791E /* MWRowWindowController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MWRowWindowController.py; sourceTree = "<group>"; };
 		BEE74CCD0E64865C0081791E /* RowWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowWindow.xib; sourceTree = "<group>"; };
 		BEE9BD040E5F404A00CBCEC3 /* MWController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MWController.py; sourceTree = "<group>"; };
+		CC1DBBB518FEC87C0075CB6B /* libpython2.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpython2.7.dylib; path = ../../../../../System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config/libpython2.7.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1DBBB618FEC87C0075CB6B /* libpython2.7.dylib in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				77631A270C06C501005415CB /* Python.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +98,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77631A260C06C501005415CB /* Python.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -104,6 +130,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				CC1DBBB518FEC87C0075CB6B /* libpython2.7.dylib */,
 			);
 			name = MetaWindow;
 			sourceTree = "<group>";
@@ -151,6 +178,9 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 			);
 			buildRules = (
+				CC1DBBB418FEC4090075CB6B /* PBXBuildRule */,
+				CC1DBBB318FEC4070075CB6B /* PBXBuildRule */,
+				CC1DBBB218FEC4060075CB6B /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -240,15 +270,27 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MetaWindow_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = MetaWindow;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -262,9 +304,20 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MetaWindow_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = MetaWindow;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

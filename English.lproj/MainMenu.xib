@@ -415,7 +415,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="search:" target="388" id="391"/>
+                            <action selector="search:" target="388" id="CCf-IZ-KGT"/>
                         </connections>
                     </button>
                     <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" minValue="16" maxValue="100" doubleValue="16" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="413">
@@ -434,7 +434,7 @@
                 <outlet property="arrayController" destination="395" id="405"/>
                 <outlet property="indicator" destination="413" id="414"/>
                 <outlet property="tableView" destination="378" id="390"/>
-                <outlet property="textField" destination="384" id="389"/>
+                <outlet property="textField" destination="384" id="arr-pp-JkH"/>
             </connections>
         </customObject>
         <arrayController id="395" customClass="MWDragArrayController">
